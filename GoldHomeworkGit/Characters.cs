@@ -5,11 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 namespace Game.Characters
 {
     abstract class Character //이거 객체 자체가 직접 존재할 이유가 없다... 그러니 추상 클래스가 맞지 않을까?
     {
+        public SoundPlayer[] sounds = new SoundPlayer[]
+        {
+            new SoundPlayer("Sound/cannon.wav"),
+            new SoundPlayer("Sound/machinegun.wav")
+        };
+ 
         public string Name { get; private set; }
         private int hp; //체력에 프로퍼티 만들긴 해야 할 듯. 잘못된 값이 들어갈 수 있으니.
         public CharType Type { get; private set; }
@@ -151,8 +158,8 @@ namespace Game.Characters
         { //this. 를 사용하면 매개변수 attacker를 받을 필요가 없어진댄다...
             Console.WriteLine("( ㅡ _ㅡ) : 공축기관총 사격!");
             int miss = hitrand.Next(0, 100); // 명중률이 60이니, 60까지면 적중하고 61부터 100까지면 미스?
-
-            Console.ReadKey();
+            sounds[1].PlaySync();           
+            
 
             if (this.HitRate < miss) //명중률이 랜덤값을 넘지 못하면
             {                                //아니 근데... 어차피 그냥 HitRate써도 될 것 같은데?
@@ -180,10 +187,9 @@ namespace Game.Characters
             Console.WriteLine("(# > _<) : 장전 끝! ( ㅁ _ㅁ) : 조준 끝!");
             Console.ReadLine();
             Console.WriteLine("( ㅡ _ㅡ) : 쏴!");
+            sounds[0].PlaySync();
             int miss = hitrand.Next(0, 100) - target.EvasionBonus(); // 전차는 더 잘 맞아야 한다. 보병은 더 잘 피한다.
-            //이렇게 하면, 실질적으로는 miss의 숫자가 작아진다 = 더 맞기 쉬워진다.
-
-            Console.ReadKey();
+            //이렇게 하면, 실질적으로는 miss의 숫자가 작아진다 = 더 맞기 쉬워진다.            
 
             Console.WriteLine($"명중률 : {this.HitRate}, 타입 : {target.Type}, 명중 보정치 : {target.EvasionBonus()}");
             if(this.IsEvasive)

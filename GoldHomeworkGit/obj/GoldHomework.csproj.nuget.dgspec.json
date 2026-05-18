@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PCuser\\source\\repos\\C#\\GoldHomework\\GoldHomework\\GoldHomework.csproj": {}
+    "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PCuser\\source\\repos\\C#\\GoldHomework\\GoldHomework\\GoldHomework.csproj": {
+    "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PCuser\\source\\repos\\C#\\GoldHomework\\GoldHomework\\GoldHomework.csproj",
+        "projectUniqueName": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
         "projectName": "GoldHomework",
-        "projectPath": "C:\\Users\\PCuser\\source\\repos\\C#\\GoldHomework\\GoldHomework\\GoldHomework.csproj",
+        "projectPath": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
         "packagesPath": "C:\\Users\\PCuser\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PCuser\\source\\repos\\C#\\GoldHomework\\GoldHomework\\obj\\",
+        "outputPath": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PCuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "System.Windows.Extensions": {
+              "target": "Package",
+              "version": "[10.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -13,8 +13,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Sound\cannon.wav" />
+    <None Remove="Sound\machinegun.wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Sound\cannon.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\machinegun.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="Crews.cs" />
     <None Include="TempCode.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Windows.Extensions" Version="10.0.8" />
   </ItemGroup>
 
 </Project>
