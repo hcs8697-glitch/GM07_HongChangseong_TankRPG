@@ -14,7 +14,10 @@ namespace Game.Characters
         public SoundPlayer[] sounds = new SoundPlayer[]
         {
             new SoundPlayer("Sound/cannon.wav"),
-            new SoundPlayer("Sound/machinegun.wav")
+            new SoundPlayer("Sound/machinegun.wav"),
+            new SoundPlayer("Sound/miss.wav"),            
+            new SoundPlayer("Sound/cannonhit.wav"),            
+            new SoundPlayer("Sound/evasive.wav")            
         };
  
         public string Name { get; private set; }
@@ -156,15 +159,17 @@ namespace Game.Characters
 
         public override void Attack(Character target) //또 고민인게... 어차피 로직이 비슷하면 굳이 이걸 추상으로 상속할 이유가?
         { //this. 를 사용하면 매개변수 attacker를 받을 필요가 없어진댄다...
-            Console.WriteLine("( ㅡ _ㅡ) : 공축기관총 사격!");
+            Console.WriteLine("( ㅡ _ㅡ) : 공축기관총 사격! (Enter)");
+            Console.ReadKey();
             int miss = hitrand.Next(0, 100); // 명중률이 60이니, 60까지면 적중하고 61부터 100까지면 미스?
+            Console.WriteLine("판정중");
             sounds[1].PlaySync();           
             
 
             if (this.HitRate < miss) //명중률이 랜덤값을 넘지 못하면
             {                                //아니 근데... 어차피 그냥 HitRate써도 될 것 같은데?
                 //Console.Clear();        //근데... 적을 매개변수로 받잖아? 그러면 그거에 따라 확률을 다르게 설계할 수도 있을 듯?
-                Console.WriteLine("( ㅁ _ㅁ) : 빗나갔습니다!");
+                Console.WriteLine("( ㅁ _ㅁ) : 빗나갔습니다!");                
             }                              //공격과 특수공격은 아예 설계를 잘못했을 수도 있다. 리스코프 치환 원칙 생각하면 인터페이스로 해야?
             else
             {
@@ -185,8 +190,10 @@ namespace Game.Characters
         public override void SpecialAttack(Character target) //모든 클래스가 가질 것 같진 않음.
         {
             Console.WriteLine("(# > _<) : 장전 끝! ( ㅁ _ㅁ) : 조준 끝!");
-            Console.ReadLine();
-            Console.WriteLine("( ㅡ _ㅡ) : 쏴!");
+            Console.ReadKey();
+            Console.WriteLine("( ㅡ _ㅡ) : 쏴! (Enter)");
+            Console.ReadKey();
+            Console.WriteLine("판정중");
             sounds[0].PlaySync();
             int miss = hitrand.Next(0, 100) - target.EvasionBonus(); // 전차는 더 잘 맞아야 한다. 보병은 더 잘 피한다.
             //이렇게 하면, 실질적으로는 miss의 숫자가 작아진다 = 더 맞기 쉬워진다.            
@@ -203,7 +210,7 @@ namespace Game.Characters
 
             if (this.HitRate < miss)
             {
-                //Console.Clear();
+                sounds[2].Play();
                 Random rand = new Random();
                 int randQuote = rand.Next(0, 4);
                 switch (randQuote)
@@ -233,6 +240,7 @@ namespace Game.Characters
                     Console.WriteLine("회피기동 보너스 적용중");
                     finalAtk = (int)(finalAtk * 1.75f);
                 }
+                sounds[3].Play();
                 target.TakeDamage(finalAtk);  //나중에 주포 대미지에 관한 필드로 변경하는 게 좋을 것.                                                       
                 Console.WriteLine("( ㅡ _ㅡ) : 명중!");
                 Console.WriteLine($"피해량 : {finalAtk}");
@@ -242,6 +250,7 @@ namespace Game.Characters
         public override void Evasive() //코드 상 문제는 없어보이는데, 완전히 잘못 설계했음.
         {
             base.Evasive();
+            sounds[4].Play();
             Console.WriteLine("( ㅡ _ㅡ) : 전속전진!");
             Console.WriteLine("(# > _<) : 라져!");
             Console.WriteLine("다음 턴까지 피해량이 1.75배 증가하고 피격 확률이 10%p 감소합니다.");
@@ -259,31 +268,35 @@ namespace Game.Characters
 
         public override void Attack(Character target)
         {
-            Console.WriteLine($"{Name} 이/가 기본 공격합니다.");            
+            Console.WriteLine($"{Name} 이/가 공축기관총을 겨냥합니다. (Enter)");            
             int miss = hitrand.Next(0, 100);
-
+            Console.ReadKey();
+            Console.WriteLine("판정중");
             sounds[1].PlaySync();
 
             if (target.IsEvasive)
             {
                 Console.WriteLine($"{target.Name}은/는 회피기동 적용중입니다.");
-                miss = miss + 10; //이게 뭐니 이게... 진짜 구현 못했다.
+                miss = miss + 10;
             }
             if (this.HitRate < miss) //명중률이 랜덤값을 넘지 못하면
-            {                
+            {
+                sounds[2].Play();
                 Console.WriteLine("( ㅡ _ㅡ) : 피해 없음!");
             }
             else
             {
                 target.TakeDamage(this.Atk);                                                  
                 Console.WriteLine("( ㅁ _ㅁ) : 피탄당했습니다!");
+                Console.WriteLine($"피해량 : {Atk}");
             }
         }
         public override void SpecialAttack(Character target)
         {
-            Console.WriteLine($"{Name} 이/가 주포로 공격합니다.");
+            Console.WriteLine($"{Name} 이/가 주포를 겨냥합니다. (Enter)");
             int miss = hitrand.Next(0, 100) - target.EvasionBonus();
-
+            Console.ReadKey();
+            Console.WriteLine("판정중");
             sounds[0].PlaySync();
 
             if (target.IsEvasive)
@@ -293,7 +306,7 @@ namespace Game.Characters
             }
             if (this.HitRate < miss)
             {
-                //Console.Clear();
+                sounds[2].Play();
                 Console.WriteLine("( ㅡ _ㅡ) : 피해 없음!");
             }
             else
@@ -305,12 +318,12 @@ namespace Game.Characters
                 //    finalAtk = (int)(finalAtk * 1.75f); 적도 회피기동을 할 수 있다면 이걸 잘 활용하면 된다.
                 //}
                 target.TakeDamage(finalAtk * 2);  //나중에 주포 대미지에 관한 필드로 변경하는 게 좋을 것.                                                       
+                sounds[3].Play();
                 Console.WriteLine("( ㅡ _ㅡ) : 피탄! 비관통!");
                 Console.WriteLine("(# > _<) : 젠장할!");
+                Console.WriteLine($"피해량 : {Atk * 2}");
             }
         }
-
-
     }
 
     class LightTank : Enemy
@@ -350,7 +363,7 @@ namespace Game.Characters
     }
     class Boss : Enemy
     {
-        public Boss() : base("적 초重전차", 1200, 65, 70, CharType.Boss) //오히려 보스가 쉬워버림. 한 마리만 나와서.
+        public Boss() : base("적 초重전차", 1200, 70, 70, CharType.Boss) //오히려 보스가 쉬워버림. 한 마리만 나와서.
         {
 
         }
