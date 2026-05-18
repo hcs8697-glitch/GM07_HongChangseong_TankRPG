@@ -33,10 +33,10 @@ namespace Game.Core
             new AllyEnc(),
         };
 
-        private int turn = 30;
+        private int turn = 40;
         private int passedTurn = 0;
-        private int maxTurn = 30; // 이것의 초기값을... 애초에 turn의 첫 값을 받아오게 하던가 할 순 없으려나?
-        private bool isBossDefeated = false;
+        private int maxTurn = 40; // 이것의 초기값을... 애초에 turn의 첫 값을 받아오게 하던가 할 순 없으려나?
+        private static bool isBossDefeated = false;
 
         public int Turn
         {
@@ -74,7 +74,7 @@ namespace Game.Core
             }
         }
 
-        public bool IsBossDefeated
+        public static bool IsBossDefeated
         {
             get
                 { return isBossDefeated; }
@@ -99,7 +99,7 @@ namespace Game.Core
                 Console.WriteLine($"[남은 턴 : {Turn}]");
                 Console.WriteLine($"[연료 : {player.Fuel}]");
                 Console.WriteLine("========================================");
-
+                Console.WriteLine();
                 ShowStatus(player);
 
                 //상태를 굳이 버튼을 눌러서 봐야 할까? 그냥 여기서 띄우든 메서드 갖고와서 띄우든 해야지.
@@ -139,7 +139,7 @@ namespace Game.Core
 
                 }
             }
-            Console.WriteLine("게임 종료");
+            Console.WriteLine("게임 종료"); //결과에 따라 Result() 메서드를 실행하게 하면 종료 문구도 다르게 출력 가능.
         }
 
         private void Proceed()
@@ -161,12 +161,19 @@ namespace Game.Core
 
             int encRate = rand.Next(0, 100); //이걸 그냥 필드로 갖는 게? 아니 그냥... 랜덤 돌려서 하면 되는 거 아닌가?
 
-            if (encRate > 65) //이거 아마... encManager 이런 거 만들어서 int형을 매개변수로 한다.
-                                   //그래서 [i]형 인카운터를 실행하게 하면 끝이지 않을까.
+            float progress = (float)PassedTurn / MaxTurn;// 이것도 이곳저곳에서 많이 쓰는데, 필드로 갖던가 해야하나.
+            
+            if (progress > 0.9) // 진행도 0.9 이상이면 보스 확정 출현
             {
                 encounter[1].enc(player);                
             }
-            else
+            else if (encRate > 65) 
+            {
+                encounter[0].enc(player);
+                battleSystem.Battle(player, PassedTurn, MaxTurn);
+            }
+            else//이거 아마... encManager 이런 거 만들어서 int형을 매개변수로 한다.
+                //그래서 [i]형 인카운터를 실행하게 하면 끝이지 않을까.
             {
                 encounter[0].enc(player);
                 battleSystem.Battle(player, PassedTurn, MaxTurn); //적과 조우했을 때 확정적으로 불러오는데... 내 선택에 따라서 바꿀 수 있게 하려면?
@@ -377,7 +384,7 @@ namespace Game.Core
             //처치한 적 타입에 따라 보상 다르게 하는 건 추후 구현
             //그리고... 이렇게 하면 안 된다.
             //적들이 애초에 인스턴스가 생성될 때 랜덤으로 포탄과 연료, 자원을 갖고 생성되게 해야 한다.
-            //그리고 내가 처치하면 확률적으로 그 값을 더하는 식으로 가야 한다.
+            //그리고 내가 처치하면 확률적으로 그 값을 더하는 식으로 가야 한다.                       
 
             if (progress < 0.4) 
             {
@@ -600,9 +607,15 @@ namespace Game.Core
 
                 foreach (Character character in turnQueue)
                 {
-                    if (character is Enemy && character.Hp >0)
+                    if (character is Enemy && character.Hp > 0)
                     {
                         hasEnemyAlive = true;
+                        break;
+                    }
+                    else if (character is Boss && character.Hp <= 0) //임시구현
+                    {                                                               //절대... 이렇게 하면 안 된다.
+                        MainGame.IsBossDefeated = true;
+                        Console.WriteLine("보스 격파.");
                         break;
                     }
                 }

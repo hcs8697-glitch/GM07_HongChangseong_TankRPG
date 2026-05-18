@@ -242,7 +242,7 @@ namespace Game.Characters
         public override void Evasive() //코드 상 문제는 없어보이는데, 완전히 잘못 설계했음.
         {
             base.Evasive();
-            Console.WriteLine("( ㅡ _ㅡ) : 전속! 차체 숨겨!");
+            Console.WriteLine("( ㅡ _ㅡ) : 전속전진!");
             Console.WriteLine("(# > _<) : 라져!");
             Console.WriteLine("다음 턴까지 피해량이 1.75배 증가하고 피격 확률이 10%p 감소합니다.");
         }
@@ -262,7 +262,7 @@ namespace Game.Characters
             Console.WriteLine($"{Name} 이/가 기본 공격합니다.");            
             int miss = hitrand.Next(0, 100);
 
-            Console.ReadKey();
+            sounds[1].PlaySync();
 
             if (target.IsEvasive)
             {
@@ -282,9 +282,9 @@ namespace Game.Characters
         public override void SpecialAttack(Character target)
         {
             Console.WriteLine($"{Name} 이/가 주포로 공격합니다.");
-            int miss = hitrand.Next(0, 100) - target.EvasionBonus(); 
+            int miss = hitrand.Next(0, 100) - target.EvasionBonus();
 
-            Console.ReadKey();
+            sounds[0].PlaySync();
 
             if (target.IsEvasive)
             {

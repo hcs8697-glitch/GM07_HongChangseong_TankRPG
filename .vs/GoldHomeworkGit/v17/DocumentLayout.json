@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\tempcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\tempcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\encounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\encounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\crews.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,8 +19,16 @@
       "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\nogari.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\maingame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\tempcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\tempcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\characters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\goldhomework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -31,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\sound\\cannon.wav||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\sound\\cannon.wav||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|c:\\users\\pcuser\\desktop\\gmrepository\\gmrepository\\goldhomeworkgit\\encounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94D2E71B-F44B-208A-FFFA-6FF63E16C152}|GoldHomeworkGit\\GoldHomework.csproj|solutionrelative:goldhomeworkgit\\encounters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,21 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GoldHomework",
-              "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
-              "RelativeDocumentMoniker": "GoldHomeworkGit\\GoldHomework.csproj",
-              "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
-              "RelativeToolTip": "GoldHomeworkGit\\GoldHomework.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-18T11:23:58.663Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -79,7 +66,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
+              "Title": "GoldHomework.csproj",
+              "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
+              "RelativeDocumentMoniker": "GoldHomeworkGit\\GoldHomework.csproj",
+              "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\GoldHomework.csproj",
+              "RelativeToolTip": "GoldHomeworkGit\\GoldHomework.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-05-18T11:23:58.663Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "cannon.wav",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Sound\\cannon.wav",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Sound\\cannon.wav",
@@ -90,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TempCode.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\TempCode.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\TempCode.cs",
               "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\TempCode.cs",
               "RelativeToolTip": "GoldHomeworkGit\\TempCode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAADwvw4AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T10:57:36.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Shop.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Shop.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Shop.cs",
@@ -111,12 +110,11 @@
               "RelativeToolTip": "GoldHomeworkGit\\Shop.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:57:36.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T10:57:36.531Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Program.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Program.cs",
@@ -124,8 +122,7 @@
               "RelativeToolTip": "GoldHomeworkGit\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-18T10:57:35.913Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T10:57:35.913Z"
             },
             {
               "$type": "Document",
@@ -135,27 +132,27 @@
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Nogari.cs",
               "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Nogari.cs",
               "RelativeToolTip": "GoldHomeworkGit\\Nogari.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAYwAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAADABAAAAAAAAAAAAwD8BAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T10:57:35.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "MainGame.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\MainGame.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\MainGame.cs",
               "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\MainGame.cs",
               "RelativeToolTip": "GoldHomeworkGit\\MainGame.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABoAAAAAAAAAAAAUwCUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T10:57:26.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "Enums.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Enums.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Enums.cs",
@@ -168,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Encounters.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Encounters.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Encounters.cs",
@@ -181,13 +178,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Characters.cs",
               "DocumentMoniker": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Characters.cs",
               "RelativeDocumentMoniker": "GoldHomeworkGit\\Characters.cs",
               "ToolTip": "C:\\Users\\PCuser\\Desktop\\GMRepository\\GMRepository\\GoldHomeworkGit\\Characters.cs",
               "RelativeToolTip": "GoldHomeworkGit\\Characters.cs",
-              "ViewState": "AgIAABABAAAAAAAAAAAmwMgAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAACoBAAAAAAAAAAAwwDYBAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-18T10:57:31.194Z",
               "EditorCaption": ""
