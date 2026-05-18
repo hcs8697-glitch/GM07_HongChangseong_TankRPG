@@ -165,18 +165,19 @@ namespace Game.Core
             
             if (progress > 0.9) // 진행도 0.9 이상이면 보스 확정 출현
             {
-                encounter[1].enc(player);                
-            }
-            else if (encRate > 65) 
-            {
                 encounter[0].enc(player);
                 battleSystem.Battle(player, PassedTurn, MaxTurn);
+            }
+            else if (encRate > 70) 
+            {
+                encounter[0].enc(player);
+                battleSystem.Battle(player, PassedTurn, MaxTurn); //적과 조우했을 때 확정적으로 불러오는데... 내 선택에 따라서 바꿀 수 있게 하려면?
             }
             else//이거 아마... encManager 이런 거 만들어서 int형을 매개변수로 한다.
                 //그래서 [i]형 인카운터를 실행하게 하면 끝이지 않을까.
             {
-                encounter[0].enc(player);
-                battleSystem.Battle(player, PassedTurn, MaxTurn); //적과 조우했을 때 확정적으로 불러오는데... 내 선택에 따라서 바꿀 수 있게 하려면?
+                encounter[1].enc(player);
+                
             }
         }
 
@@ -574,7 +575,7 @@ namespace Game.Core
                     //내가 입력할 부분은 없으니, 랜덤 돌려서 행동 고르게 하면 될 것?
 
                     Random tempRnd = new Random();
-                    int tempChoice = tempRnd.Next(0, 2);
+                    int tempChoice = tempRnd.Next(0, 4);
                     switch (tempChoice)
                     {
                         case 0:

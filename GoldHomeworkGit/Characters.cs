@@ -363,7 +363,7 @@ namespace Game.Characters
     }
     class Boss : Enemy
     {
-        public Boss() : base("적 초重전차", 1200, 70, 70, CharType.Boss) //오히려 보스가 쉬워버림. 한 마리만 나와서.
+        public Boss() : base("적 초重전차", 1200, 70, 60, CharType.Boss) //오히려 보스가 쉬워버림. 한 마리만 나와서.
         {
 
         }
