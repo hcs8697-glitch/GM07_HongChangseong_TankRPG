@@ -17,8 +17,10 @@ namespace Game.Characters
             new SoundPlayer("Sound/machinegun.wav"),
             new SoundPlayer("Sound/miss.wav"),            
             new SoundPlayer("Sound/cannonhit.wav"),            
-            new SoundPlayer("Sound/evasive.wav")            
-        };
+            new SoundPlayer("Sound/evasive.wav"),            
+            new SoundPlayer("Sound/gunhit.wav")            
+        }; //Soundmanager 클래스를 만들고 거기에다가 효과음과 배경음을 넣어두고
+          //아니근데 어차피 음성만 재생할 거잖아? 그럼 그냥 스태틱 클래스로 해도 되는 거 아님? 
  
         public string Name { get; private set; }
         private int hp; //체력에 프로퍼티 만들긴 해야 할 듯. 잘못된 값이 들어갈 수 있으니.
@@ -252,7 +254,7 @@ namespace Game.Characters
             base.Evasive();
             sounds[4].Play();
             Console.WriteLine("( ㅡ _ㅡ) : 전속전진!");
-            Console.WriteLine("(# > _<) : 라져!");
+            Console.WriteLine("( ^ ▽^) : 라져!");
             Console.WriteLine("다음 턴까지 피해량이 1.75배 증가하고 피격 확률이 10%p 감소합니다.");
         }
 
@@ -281,11 +283,11 @@ namespace Game.Characters
             }
             if (this.HitRate < miss) //명중률이 랜덤값을 넘지 못하면
             {
-                sounds[2].Play();
                 Console.WriteLine("( ㅡ _ㅡ) : 피해 없음!");
             }
             else
             {
+                sounds[5].Play();
                 target.TakeDamage(this.Atk);                                                  
                 Console.WriteLine("( ㅁ _ㅁ) : 피탄당했습니다!");
                 Console.WriteLine($"피해량 : {Atk}");
@@ -320,7 +322,7 @@ namespace Game.Characters
                 target.TakeDamage(finalAtk * 2);  //나중에 주포 대미지에 관한 필드로 변경하는 게 좋을 것.                                                       
                 sounds[3].Play();
                 Console.WriteLine("( ㅡ _ㅡ) : 피탄! 비관통!");
-                Console.WriteLine("(# > _<) : 젠장할!");
+                Console.WriteLine("( ^ ▽^) : 젠장할!");
                 Console.WriteLine($"피해량 : {Atk * 2}");
             }
         }

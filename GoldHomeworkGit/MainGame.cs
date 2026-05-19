@@ -117,8 +117,17 @@ namespace Game.Core
                 }
                 if (!Enum.IsDefined(typeof(IdleOption), (IdleOption)choice))
                 {
-                    dialogueManager.PrintDialogue();
-                    continue;
+                    if(player.Hp <300)
+                    {
+                        Console.WriteLine("상황이 심각하여 대화할 수 없습니다.");
+                        Console.ReadKey();
+                        continue;
+                    }
+                    else
+                    {
+                        dialogueManager.PrintDialogue();
+                        continue;
+                    }
                 }
                 switch ((IdleOption)choice)
                 {
@@ -199,8 +208,12 @@ namespace Game.Core
         private void Search() //근데 솔직히, 탐색이라는 행동 자체가 손해잖아. 연료가 충분하다면 안 할 일인데?
         {
             Console.WriteLine("주변 물자를 수색합니까?");
+            Console.WriteLine("1. 예, 그 외. 아니오.");
 
-            Console.ReadKey(); //여기에서 입력에 따라 뒤로 돌아가게 한다거나... 1. 예, 2. 아니오 해서 return으로 끝내버리면 되잖아?
+            if (!int.TryParse(Console.ReadLine(), out int choice) || choice != 1) //변환에 실패하거나, 입력이 1이 아니라면
+            {
+                return;
+            }
 
             PassTurn();
 

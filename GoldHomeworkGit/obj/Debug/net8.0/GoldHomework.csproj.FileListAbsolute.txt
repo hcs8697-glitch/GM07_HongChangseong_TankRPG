@@ -36,3 +36,4 @@ C:\Users\PCuser\Desktop\GMRepository\GMRepository\GoldHomeworkGit\bin\Debug\net8
 C:\Users\PCuser\Desktop\GMRepository\GMRepository\GoldHomeworkGit\bin\Debug\net8.0\Sound\miss.wav
 C:\Users\PCuser\Desktop\GMRepository\GMRepository\GoldHomeworkGit\bin\Debug\net8.0\Sound\cannonhit.wav
 C:\Users\PCuser\Desktop\GMRepository\GMRepository\GoldHomeworkGit\bin\Debug\net8.0\Sound\evasive.wav
+C:\Users\PCuser\Desktop\GMRepository\GMRepository\GoldHomeworkGit\bin\Debug\net8.0\Sound\gunhit.wav

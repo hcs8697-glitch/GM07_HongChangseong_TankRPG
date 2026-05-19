@@ -17,6 +17,7 @@
     <None Remove="Sound\cannon.wav" />
     <None Remove="Sound\cannonhit.wav" />
     <None Remove="Sound\evasive.wav" />
+    <None Remove="Sound\gunhit.wav" />
     <None Remove="Sound\machinegun.wav" />
     <None Remove="Sound\miss.wav" />
   </ItemGroup>
@@ -29,6 +30,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sound\evasive.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\gunhit.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Sound\machinegun.wav">
